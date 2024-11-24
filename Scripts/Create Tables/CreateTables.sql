@@ -1,8 +1,9 @@
-DROP DATABASE ConfederationsCup2013
+
 /*
 CREATE DATABASE ConfederationsCup2013
 --Creamos la tabla maestro de los equipos
-
+*/
+USE ConfederationsCup2013
 
 --Creacion de tablas maestras
 --Tabla de equipos

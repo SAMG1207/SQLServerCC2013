@@ -11,10 +11,12 @@ INSERT INTO Teams(TeamName) VALUES
 ('Nigeria')
 
 SELECT * FROM Teams
-	*/
+	
+*/
 
-	/*
-INSERT INTO [ConfederationsCup2013Brazil].dbo.Stadiums (StadiumName, StadiumCity, StadiumCapacity) 
+/*
+	
+INSERT INTO [ConfederationsCup2013].dbo.Stadiums (StadiumName, StadiumCity, StadiumCapacity) 
 VALUES
     ('Estádio do Maracanã', 'Rio de Janeiro', 76804),
     ('Estádio Castelão', 'Fortaleza', 64846),
@@ -23,33 +25,35 @@ VALUES
     ('Estádio Mineirão', 'Belo Horizonte', 62547),
     ('Arena Pernambuco', 'Recife', 44248);
 
-SELECT * FROM [ConfederationsCup2013Brazil].dbo.Stadiums 
+SELECT * FROM [ConfederationsCup2013].dbo.Stadiums 
+
 */
 
 /*
-
-INSERT INTO [ConfederationsCup2013Brazil].dbo.Stage (StageName)
+INSERT INTO [ConfederationsCup2013].dbo.Stage (StageName)
 VALUES
     ('Fase de Grupos'),
     ('Semifinal'),
     ('tercer lugar'),
     ('Final');
 
-	SELECT * FROM [ConfederationsCup2013Brazil].dbo.Stage
+	SELECT * FROM [ConfederationsCup2013].dbo.Stage
+
 */
 
 /*
-INSERT INTO [ConfederationsCup2013Brazil].dbo.Position (PositionName)
+
+INSERT INTO [ConfederationsCup2013].dbo.Position (PositionName)
 VALUES
 ('GK'),
 ('DF'),
 ('MF'),
 ('FW');
-SELECT * FROM [ConfederationsCup2013Brazil].dbo.Position
+SELECT * FROM [ConfederationsCup2013].dbo.Position
 */
-/*
 
-INSERT INTO [ConfederationsCup2013Brazil].[dbo].[Players] (PlayerName, PlayerTeamIdFk,PlayerPositionIdFk,PlayerDOB) VALUES 
+/*
+INSERT INTO [ConfederationsCup2013].[dbo].[Players] (PlayerName, PlayerTeamIdFk,PlayerPositionIdFk,PlayerDOB) VALUES 
 ('Thiago Silva',1,2,'22 September 1984 '),
 ('Réver',1,2,'4 January 1985 '),
 ('Paulinho',1,3,'25 July 1988 '),
@@ -235,4 +239,12 @@ INSERT INTO [ConfederationsCup2013Brazil].[dbo].[Players] (PlayerName, PlayerTea
 ('Kenneth Omeruo',8,2,'17 October 1993 '),
 ('Chigozie Agbim',8,1,'28 November 1984 ');
 
-	
+	SELECT * FROM [ConfederationsCup2013].[dbo].[Players] 
+*/
+SELECT * FROM Stadiums
+INSERT [dbo].[Games] (DateOfGame, StadiumId, HomeTeamId, AwayTeamId, HomeTeamGoals, AwayTeamGoals)
+VALUES
+('June 15, 2013',
+(SELECT idStadiumPk FROM Stadiums WHERE StadiumCity = 'Brasilia' ),
+()
+)
